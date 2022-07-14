@@ -10,6 +10,9 @@
 #'   dplyr, rio, sf, tinker, ggplot2
 #' -------------------------------------------------------------------------------------------------
 
+library(dplyr)
+
+# LOAD ---------------------------------------------------------------------------------------------
 df <- rio::import(here::here('data-raw', 'drc', 'geo_dictionary_drc.csv'))
 
 sf_zone <- sf::read_sf(here::here('data-raw', 'drc', 'RDC_Zone_de_sante_04012019.shp')) %>%
@@ -17,7 +20,9 @@ sf_zone <- sf::read_sf(here::here('data-raw', 'drc', 'RDC_Zone_de_sante_04012019
              as_tibble() %>%
              select(PAYS, PROVINCE, Nom, geometry) %>%
              mutate(area = sf::st_area(geometry) / 1000^2)
+           
 
+# WRANGLE ------------------------------------------------------------------------------------------
 # clean up 
 sf_zone <- sf_zone %>%
              linelist::clean_data() %>%
@@ -28,8 +33,8 @@ sf_zone <- sf_zone %>%
 
 # fix region name issues
 sf_zone <- sf_zone %>%
-  mutate(reg = case_when(reg == 'mai_ndombe' ~ 'maindombe', # mai-ndombe spelling issue
-                         reg == 'haut_katanga' & zone == 'manika' ~ 'lualaba', # fix reg for manika
+  mutate(reg = case_when(reg == 'mai_ndombe' ~ 'maindombe', 
+                         reg == 'haut_katanga' & zone == 'manika' ~ 'lualaba', 
                          TRUE ~ reg))
 
 # fix zone name issues

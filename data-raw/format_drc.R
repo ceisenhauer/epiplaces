@@ -20,7 +20,8 @@ sf_drc_zone <- sf::read_sf(here::here('data-raw', 'drc', 'RDC_Zone_de_sante_0401
              sf::st_make_valid() %>%
              as_tibble() %>%
              select(PAYS, PROVINCE, Nom, geometry) %>%
-             mutate(area = sf::st_area(geometry) / 1000^2)
+             mutate(PAYS = 'drc',
+                    area = sf::st_area(geometry) / 1000^2)
            
 
 # WRANGLE ------------------------------------------------------------------------------------------
@@ -102,16 +103,17 @@ ggplot2::ggplot(sf_drc_zone) +
 
 
 # SAVE ---------------------------------------------------------------------------------------------
-usethis::use_data(sf_drc_zone)
+usethis::use_data(sf_drc_zone)#, overwrite = TRUE)
 
 
 # BUILD AND SAVE REGIONAL LEVEL --------------------------------------------------------------------
 sf_drc_reg <- sf_drc_zone %>% 
                 group_by(reg) %>%
                 summarize() %>%
-                mutate(area = sf::st_area(geometry) / 1000^2,
+                mutate(country = 'drc',
+                       area = sf::st_area(geometry) / 1000^2,
                        reg_display = stringr::str_replace(reg, '_', ' '),
                        reg_display = stringr::str_to_title(reg_display))
 
-usethis::use_data(sf_drc_reg)
+usethis::use_data(sf_drc_reg)#, overwrite = TRUE)
 

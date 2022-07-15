@@ -3,9 +3,9 @@
 \docType{data}
 \name{drc_nat}
 \alias{drc_nat}
-\title{DRC : National Level}
+\title{Democratic Republic of the Congo}
 \format{
-A \verb{Simple feature collection} with 519 features and 3 fields:
+A \verb{Simple feature collection} with 1 feature and 3 fields:
 \describe{
 \item{country}{Country name}
 \item{area}{Zone area (m2)}

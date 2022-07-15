@@ -3,7 +3,7 @@
 \docType{data}
 \name{drc_zone}
 \alias{drc_zone}
-\title{DRC : Zone Level}
+\title{Democratic Republic of the Congo}
 \format{
 A \verb{Simple feature collection} with 519 features and 6 fields:
 \describe{

@@ -12,3 +12,5 @@ This package doesn't really fix all those issues, but it *is* designed as a data
 ## countries available.
 <!-- epimaps:availability -->
 
+## adding countries.
+Open an [issue](https://github.com/ceisenhauer/epimaps/issues).

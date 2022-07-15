@@ -1,20 +1,26 @@
 template:
   bootstrap: 5
-  bootswatch: sandstone
+  bslib:
+    primary: '#315799'
 
 authors:
   Catherine Eisenhauer:
     href: 'https://www.linkedin.com/in/catherine-eisenhauer-76664b35'
 
 reference:
-- title: Nation Level Maps
+- title: Loading Function
+- contents:
+  - 'load_map'
+
+- title: Maps
+- subtitle: Nation
 - contents:
   - 'drc_nat'
 
-- title: Region Level Maps
+- subtitle: Region
 - contents:
   - 'drc_reg'
 
-- title: Zone Level maps
+- subtitle: Zone
 - contents:
   - 'drc_zone'

@@ -5,7 +5,8 @@
 #' @date July 2022
 #'
 #' @description Function to format and save map data for DRC. Most of the script builds the health
-#' zone level data. The final section then aggregates these data to the regional level.
+#' zone level data. The final section then aggregates these data to the regional and national
+#' levels.
 #'
 #' @suggests 
 #'   dplyr, rio, sf, tinker, ggplot2
@@ -106,7 +107,8 @@ ggplot2::ggplot(drc_reg) +
 usethis::use_data(drc_zone)#, overwrite = TRUE)
 
 
-# BUILD AND SAVE REGIONAL LEVEL --------------------------------------------------------------------
+# BUILD AND SAVE REG / NAT LEVELS ------------------------------------------------------------------
+# regional
 drc_reg <- drc_zone %>% 
                 group_by(reg) %>%
                 summarize() %>%
@@ -117,3 +119,11 @@ drc_reg <- drc_zone %>%
 
 usethis::use_data(drc_reg)#, overwrite = TRUE)
 
+# national
+drc_nat <- drc_reg %>% 
+                group_by(country) %>%
+                summarize() %>%
+                mutate(area = sf::st_area(geometry) / 1000^2,
+                       country_display = 'Democratic Republic of the Congo')
+
+usethis::use_data(drc_nat)#, overwrite = TRUE)

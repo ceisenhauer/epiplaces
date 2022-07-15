@@ -1,3 +1,24 @@
+#' DRC : National Level
+#'
+#' National level sf data for the Democratic Republic of the Congo.
+#'
+#' @docType data
+#'
+#' @format A `Simple feature collection` with 519 features and 3 fields: 
+#' \describe{
+#'  \item{country}{Country name}
+#'  \item{area}{Zone area (m2)}
+#'  \item{country_display}{Full and formatted name of `country`}
+#' }
+#'
+#' @keywords dataset
+#'
+#' @source ...unclear.
+#'
+#' @examples
+#' plot(sf::st_as_sf(drc_nat))
+'drc_nat'
+
 #' DRC : Zone Level
 #'
 #' Health zone level sf data for the Democratic Republic of the Congo.
@@ -17,8 +38,8 @@
 #' @source ...unclear.
 #'
 #' @examples
-#' sp::plot(sf_drc_reg)
-'sf_drc_reg'
+#' plot(sf::st_as_sf(drc_reg))
+'drc_reg'
 
 
 #' DRC : Zone Level
@@ -42,6 +63,6 @@
 #' @source ...unclear.
 #'
 #' @examples
-#' sp::plot(sf_drc_zone)
-'sf_drc_zone'
+#' plot(sf::st_as_sf(drc_zone))
+'drc_zone'
 

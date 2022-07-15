@@ -17,6 +17,9 @@
 #'                 as = 'data.table')
 #' head(drc)
 #'
+#' @importFrom data.table setDT
+#' @importFrom dplyr as_tibble
+#' @importFrom sf st_as_sf
 #' @export
 load_map <- function(country, level = c('zone', 'reg', 'nat'),
                      as = c('sf', 'tibble', 'data.table')) {

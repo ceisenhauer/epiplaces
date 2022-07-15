@@ -16,7 +16,7 @@ library(dplyr)
 # LOAD ---------------------------------------------------------------------------------------------
 df <- rio::import(here::here('data-raw', 'drc', 'geo_dictionary_drc.csv'))
 
-sf_drc_zone <- sf::read_sf(here::here('data-raw', 'drc', 'RDC_Zone_de_sante_04012019.shp')) %>%
+drc_zone <- sf::read_sf(here::here('data-raw', 'drc', 'RDC_Zone_de_sante_04012019.shp')) %>%
              sf::st_make_valid() %>%
              as_tibble() %>%
              select(PAYS, PROVINCE, Nom, geometry) %>%
@@ -26,7 +26,7 @@ sf_drc_zone <- sf::read_sf(here::here('data-raw', 'drc', 'RDC_Zone_de_sante_0401
 
 # WRANGLE ------------------------------------------------------------------------------------------
 # clean up 
-sf_drc_zone <- sf_drc_zone %>%
+drc_zone <- drc_zone %>%
              linelist::clean_data() %>%
              rename(reg = province,
                     zone = nom,
@@ -38,7 +38,7 @@ sf_drc_zone <- sf_drc_zone %>%
                            stringr::str_to_title))
 
 # fix region name issues
-sf_drc_zone <- sf_drc_zone %>%
+drc_zone <- drc_zone %>%
   mutate(reg = case_when(reg == 'mai_ndombe' ~ 'maindombe', 
                          reg == 'haut_katanga' & zone == 'manika' ~ 'lualaba', 
                          TRUE ~ reg))
@@ -71,7 +71,7 @@ fixes <- list('bagira' = 'bagira_kasha',
               'penjwa' = 'pendjwa',
               'yalifafo' = 'yalifafu')
 
-sf_drc_zone <- tinker::validate_names(df_new = sf_drc_zone,
+drc_zone <- tinker::validate_names(df_new = drc_zone,
                                   df_ref = df,
                                   fix_zone = fixes)
 
@@ -84,30 +84,30 @@ sf_drc_zone <- tinker::validate_names(df_new = sf_drc_zone,
 
 #df[grepl('kay', df$zone), ]
 
-#sf_drc_zone[grepl('lu', sf_drc_zone$zone), c('zone', 'reg')]
+#drc_zone[grepl('lu', drc_zone$zone), c('zone', 'reg')]
 
-#sf_drc_zone %>% filter(reg == 'tshopo') %>% select(reg, zone, Nom) %>% as.data.frame
+#drc_zone %>% filter(reg == 'tshopo') %>% select(reg, zone, Nom) %>% as.data.frame
 
 #df %>%
-  #filter(zone %notin% sf_drc_zone$zone)
+  #filter(zone %notin% drc_zone$zone)
 
 
 # CONVERT BACK TO SF -------------------------------------------------------------------------------
-sf_drc_zone <- sf::st_as_sf(sf_drc_zone)
+drc_zone <- sf::st_as_sf(drc_zone)
 
 
 # CHECK MAP ----------------------------------------------------------------------------------------
-ggplot2::ggplot(sf_drc_zone) +
+ggplot2::ggplot(drc_reg) +
   ggplot2::geom_sf() +
   ggplot2::theme_void()
 
 
 # SAVE ---------------------------------------------------------------------------------------------
-usethis::use_data(sf_drc_zone)#, overwrite = TRUE)
+usethis::use_data(drc_zone)#, overwrite = TRUE)
 
 
 # BUILD AND SAVE REGIONAL LEVEL --------------------------------------------------------------------
-sf_drc_reg <- sf_drc_zone %>% 
+drc_reg <- drc_zone %>% 
                 group_by(reg) %>%
                 summarize() %>%
                 mutate(country = 'drc',
@@ -115,5 +115,5 @@ sf_drc_reg <- sf_drc_zone %>%
                        reg_display = stringr::str_replace(reg, '_', ' '),
                        reg_display = stringr::str_to_title(reg_display))
 
-usethis::use_data(sf_drc_reg)#, overwrite = TRUE)
+usethis::use_data(drc_reg)#, overwrite = TRUE)
 

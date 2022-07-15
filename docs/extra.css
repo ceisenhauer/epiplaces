@@ -1,0 +1,55 @@
+h3 {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 0px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.contents h3 {
+  padding-top: 40px;
+}
+
+li {
+   margin:0 0 10px 0;   
+}
+
+.template-home img.logo {
+  width: 275px;
+  margin-top: 25px;
+}
+
+img.logo {
+  width: 104px;
+}
+
+dd {
+  margin-left: 1.5rem;
+  color: #c1c1c1;
+  font-size: small;
+}
+
+.leaflet .legend i {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: 4px;
+}
+
+.leaflet-container {
+    background: transparent !important;
+}
+
+.leaflet-control-layers {
+    box-shadow: 0 0 0px !important;
+}
+
+.info {
+    box-shadow: 0 0 0px !important;
+}
+
+.leaflet-touch .leaflet-control-layers {
+    border: 0px;
+}

@@ -1,0 +1,32 @@
+h3 {
+  display: block;
+  font-size: 1.2em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 0px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.contents h3 {
+  padding-top: 40px;
+}
+
+li {
+   margin:0 0 10px 0;   
+}
+
+.template-home img.logo {
+  width: 275px;
+  margin-top: 25px;
+}
+
+img.logo {
+  width: 104px;
+}
+
+dd {
+  margin-left: 1.5rem;
+  color: #c1c1c1;
+  font-size: small;
+}

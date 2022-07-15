@@ -16,6 +16,9 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/news/index.html</loc>
+  </url>
+  <url>
     <loc>/reference/drc_nat.html</loc>
   </url>
   <url>
@@ -23,6 +26,9 @@
   </url>
   <url>
     <loc>/reference/drc_zone.html</loc>
+  </url>
+  <url>
+    <loc>/reference/figures/currently_available.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>

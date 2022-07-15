@@ -7,7 +7,7 @@
 load_map(
   country,
   level = c("zone", "reg", "nat"),
-  as = c("sf", "tibble", "data.table")
+  as = c("sf", "sp", "tibble", "data.table")
 )
 }
 \arguments{
@@ -16,8 +16,7 @@ load_map(
 \item{level}{\code{str} Level of geographic resolution to use, either : zone, reg (regional), nat
 (national). Default is \code{'zone'}.}
 
-\item{as}{\code{str} Type of output desired, either : \verb{'sf}', \code{'tibble'}, or \code{'data.table'}. Default
-is \code{'sf'}.}
+\item{as}{\code{str} Type of output desired, either : \verb{'sf}', \verb{sp', or }'tibble'\verb{, Default is }'sf'`.}
 }
 \description{
 Returns a user-specified map in a either sf or tibble format.

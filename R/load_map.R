@@ -5,8 +5,7 @@
 #' @param country `str` Country to load.
 #' @param level `str` Level of geographic resolution to use, either : zone, reg (regional), nat 
 #'   (national). Default is `'zone'`.
-#' @param as `str` Type of output desired, either : `'sf`', `'tibble'`, or `'data.table'`. Default
-#'   is `'sf'`.
+#' @param as `str` Type of output desired, either : `'sf`', `sp', or `'tibble'`, Default is `'sf'`.
 #'
 #' @examples
 #' drc <- load_map('drc')
@@ -19,23 +18,20 @@
 #'
 #' @importFrom data.table setDT
 #' @importFrom dplyr as_tibble
-#' @importFrom sf st_as_sf
+#' @importFrom sf as_Spatial st_as_sf
 #' @export
 load_map <- function(country, level = c('zone', 'reg', 'nat'),
-                     as = c('sf', 'tibble', 'data.table')) {
+                     as = c('sf', 'sp', 'tibble', 'data.table')) {
   level <- match.arg(level)
   as <- match.arg(as)
 
   map_name <- paste0('epimaps::', country, '_', level)
   out <- eval(parse(text = map_name))
 
-  if (as == 'sf') {
-      out <- sf::st_as_sf(out)
-  } else if (as == 'tibble') {
-      out <- dplyr::as_tibble(out)
-  } else {
-      data.table::setDT(out)
-  }
+  out <- switch(as,
+                'sf' = sf::st_as_sf(out),
+                'sp' = sf::as_Spatial(out),
+                'tibble' = dplyr::as_tibble(out))
 
   return(out)
 }

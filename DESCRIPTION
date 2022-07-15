@@ -23,4 +23,6 @@ Suggests:
     here,
     htmlwidgets,
     leaflet,
-    rnaturalearth
+    pkgdown,
+    rnaturalearth,
+    xml2

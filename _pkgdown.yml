@@ -1,7 +1,6 @@
 template:
   bootstrap: 5
-  bslib:
-    primary: '#315799'
+  bootswatch: sandstone
 
 authors:
   Catherine Eisenhauer:

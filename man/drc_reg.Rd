@@ -14,7 +14,7 @@ A \verb{Simple feature collection} with 26 features and 4 fields:
 }
 }
 \source{
-...unclear.
+Legacy (ie. I don't know).
 }
 \usage{
 drc_reg
@@ -23,6 +23,8 @@ drc_reg
 Health zone level sf data for the Democratic Republic of the Congo.
 }
 \examples{
-plot(sf::st_as_sf(drc_reg))
+ggplot2::ggplot(sf::st_as_sf(drc_reg)) +
+  ggplot2::geom_sf() +
+  ggplot2::theme_void()
 }
 \keyword{dataset}

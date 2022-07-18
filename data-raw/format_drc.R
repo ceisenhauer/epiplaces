@@ -98,7 +98,7 @@ drc_zone <- sf::st_as_sf(drc_zone)
 
 
 # CHECK MAP ----------------------------------------------------------------------------------------
-ggplot2::ggplot(drc_reg) +
+ggplot2::ggplot(drc_zone) +
   ggplot2::geom_sf() +
   ggplot2::theme_void()
 

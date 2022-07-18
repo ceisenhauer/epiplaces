@@ -8,7 +8,9 @@
 #' @importFrom leaflet leaflet addPolylines addPolygons
 #' @importFrom rnaturalearth ne_countries
 update_countries_available <- function(show = TRUE, update_site = TRUE) {
-  currently_available <- c('Democratic Republic of the Congo')
+  currently_available <- c('Afghanistan', 
+                           'Democratic Republic of the Congo',
+                           'Liberia')
 
   world <- rnaturalearth::ne_countries(returnclass = 'sf') %>%
              filter(admin != 'Antarctica') %>%

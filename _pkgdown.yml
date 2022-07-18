@@ -16,11 +16,15 @@ reference:
 - subtitle: Nation
 - contents:
   - 'drc_nat'
+  - 'liberia_nat'
 
 - subtitle: Region
 - contents:
   - 'drc_reg'
+  - 'liberia_reg'
 
 - subtitle: Zone
 - contents:
+  - 'afghanistan_zone'
   - 'drc_zone'
+  - 'liberia_zone'

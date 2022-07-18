@@ -19,6 +19,9 @@
     <loc>/news/index.html</loc>
   </url>
   <url>
+    <loc>/reference/afghanistan_zone.html</loc>
+  </url>
+  <url>
     <loc>/reference/drc_nat.html</loc>
   </url>
   <url>
@@ -32,6 +35,15 @@
   </url>
   <url>
     <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/liberia_nat.html</loc>
+  </url>
+  <url>
+    <loc>/reference/liberia_reg.html</loc>
+  </url>
+  <url>
+    <loc>/reference/liberia_zone.html</loc>
   </url>
   <url>
     <loc>/reference/load_map.html</loc>

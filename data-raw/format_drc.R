@@ -98,7 +98,7 @@ drc_zone <- sf::st_as_sf(drc_zone)
 
 
 # CHECK MAP ----------------------------------------------------------------------------------------
-ggplot2::ggplot(drc_zone) +
+ggplot2::ggplot(drc_reg) +
   ggplot2::geom_sf() +
   ggplot2::theme_void()
 
@@ -108,14 +108,18 @@ usethis::use_data(drc_zone)#, overwrite = TRUE)
 
 
 # BUILD AND SAVE REG / NAT LEVELS ------------------------------------------------------------------
-# regional
-drc_reg <- drc_zone %>% 
-                group_by(reg) %>%
-                summarize() %>%
-                mutate(country = 'drc',
-                       area = sf::st_area(geometry) / 1000^2,
-                       reg_display = stringr::str_replace(reg, '_', ' '),
-                       reg_display = stringr::str_to_title(reg_display))
+drc_reg <- sf::read_sf(here::here('data-raw', 'drc', 'cod_admbnda_adm1_rgc_20170711.shp')) %>%
+             sf::st_make_valid() %>%
+             as_tibble() %>%
+             select(ADM1_REF, geometry) %>%
+             mutate(country = 'drc',
+                    area = sf::st_area(geometry) / 1000^2) %>%
+             linelist::clean_data() %>%
+             rename(reg = adm1_ref) %>%
+             mutate(reg = ifelse(reg == 'mai_ndombe', 'maindombe', reg),
+                    reg_display = tinker::str_to_display(reg)) %>%
+             sf::st_as_sf()
+
 
 usethis::use_data(drc_reg)#, overwrite = TRUE)
 

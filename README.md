@@ -14,8 +14,6 @@ This package doesn't really fix all those issues, but it *is* a data repository 
 ```{r}
 drc <- epiplaces::load_map(country = 'drc',
                            level = 'region')
-
-head(drc)
 ```
 
 ## countries available.

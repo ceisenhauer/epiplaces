@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="GIS is one of epidemiologys bestest friends. Sadly, GIS data can also be a pain. Your shape file broke ? Bummer. None of the shape names match anything ? Ouch. The local government just restructured the administrative divisions and now all your work is useless ? Sad face. This package doesnt really fix all those issues, but it *is* designed as a data repository of GIS data for Epicentre where the shapes and names have been vetted to match what appears in other datasets. With `epimaps` you can easily load your map data into whichever project you want and avoid constant name validation scripts that exacerbate the risk of future failure.">
-<title>What the Package Does (One Line, Title Case) • epimaps</title>
+<title>What the Package Does (One Line, Title Case) • epiplaces</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
@@ -32,7 +32,7 @@
 
     <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
     
-    <a class="navbar-brand me-2" href="index.html">epimaps</a>
+    <a class="navbar-brand me-2" href="index.html">epiplaces</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
 
@@ -63,7 +63,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header">
-<img src="logo.svg" class="logo" alt=""><h1 id="epimaps-">epimaps <a class="anchor" aria-label="anchor" href="#epimaps-"></a>
+<img src="logo.svg" class="logo" alt=""><h1 id="epiplaces-">epiplaces <a class="anchor" aria-label="anchor" href="#epiplaces-"></a>
 </h1>
 </div>
 <!-- badges: start -->
@@ -71,7 +71,13 @@
 <h2 id="tldr">tldr.<a class="anchor" aria-label="anchor" href="#tldr"></a>
 </h2>
 <p>GIS is one of epidemiology’s bestest friends. Sadly, GIS data can also be a pain. Your shape file broke ? Bummer. None of the shape names match anything ? Ouch. The local government just restructured the administrative divisions and now all your work is useless ? Sad face.</p>
-<p>This package doesn’t really fix all those issues, but it <em>is</em> designed as a data repository of GIS data for Epicentre where the shapes and names have been vetted to match what appears in other datasets. With <code>epimaps</code> you can easily load your map data into whichever project you want and avoid constant name validation scripts that exacerbate the risk of future failure.</p>
+<p>This package doesn’t really fix all those issues, but it <em>is</em> a data repository of GIS data for Epicentre where the shapes and names have been vetted to match what appears in other datasets. With <code>epiplaces</code> you can easily load your map data into whichever project you want and avoid constant name validation scripts that exacerbate the risk of future failure.</p>
+</div>
+<div class="section level2">
+<h2 id="example">example.<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
+<pre class="{r}"><code><span class="va">drc</span> <span class="op">&lt;-</span> <span class="fu">epiplaces</span><span class="fu">::</span><span class="fu"><a href="reference/load_map.html">load_map</a></span><span class="op">(</span>country <span class="op">=</span> <span class="st">'drc'</span>,
+                           level <span class="op">=</span> <span class="st">'region'</span><span class="op">)</span></code></pre>
 </div>
 <div class="section level2">
 <h2 id="countries-available">countries available.<a class="anchor" aria-label="anchor" href="#countries-available"></a>
@@ -102,7 +108,7 @@
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html#citation">Citing epimaps</a></li>
+<li><a href="authors.html#citation">Citing epiplaces</a></li>
 </ul>
 </div>
 

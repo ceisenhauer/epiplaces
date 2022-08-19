@@ -121,7 +121,7 @@ drc_reg <- sf::read_sf(here::here('data-raw', 'drc', 'cod_admbnda_adm1_rgc_20170
              sf::st_as_sf()
 
 
-usethis::use_data(drc_reg)#, overwrite = TRUE)
+usethis::use_data(drc_reg, overwrite = TRUE)
 
 # national
 drc_nat <- drc_reg %>% 
@@ -130,4 +130,4 @@ drc_nat <- drc_reg %>%
                 mutate(area = sf::st_area(geometry) / 1000^2,
                        country_display = 'Democratic Republic of the Congo')
 
-usethis::use_data(drc_nat)#, overwrite = TRUE)
+usethis::use_data(drc_nat, overwrite = TRUE)

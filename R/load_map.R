@@ -25,7 +25,7 @@ load_map <- function(country, level = c('zone', 'reg', 'nat'),
   level <- match.arg(level)
   as <- match.arg(as)
 
-  map_name <- paste0('epimaps::', country, '_', level)
+  map_name <- paste0('epiplaces::', country, '_', level)
   out <- eval(parse(text = map_name))
 
   out <- switch(as,

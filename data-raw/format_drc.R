@@ -73,8 +73,8 @@ fixes <- list('bagira' = 'bagira_kasha',
               'yalifafo' = 'yalifafu')
 
 drc_zone <- tinker::validate_names(df_new = drc_zone,
-                                  df_ref = df,
-                                  fix_zone = fixes)
+                                   df_ref = df,
+                                   fix_zone = fixes)
 
 # in df not in sf : lufungula (kinshasa)
 # in sf not in df : kyondo and rwanguba (both nord kivu)

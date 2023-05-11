@@ -22,6 +22,12 @@
     <loc>/reference/afghanistan_zone.html</loc>
   </url>
   <url>
+    <loc>/reference/africa.html</loc>
+  </url>
+  <url>
+    <loc>/reference/asia.html</loc>
+  </url>
+  <url>
     <loc>/reference/drc_nat.html</loc>
   </url>
   <url>
@@ -29,6 +35,9 @@
   </url>
   <url>
     <loc>/reference/drc_zone.html</loc>
+  </url>
+  <url>
+    <loc>/reference/europe.html</loc>
   </url>
   <url>
     <loc>/reference/figures/currently_available.html</loc>
@@ -47,6 +56,21 @@
   </url>
   <url>
     <loc>/reference/load_map.html</loc>
+  </url>
+  <url>
+    <loc>/reference/north_america.html</loc>
+  </url>
+  <url>
+    <loc>/reference/oceania.html</loc>
+  </url>
+  <url>
+    <loc>/reference/south_america.html</loc>
+  </url>
+  <url>
+    <loc>/reference/uganda_zone.html</loc>
+  </url>
+  <url>
+    <loc>/reference/world.html</loc>
   </url>
   <url>
     <loc>/todo.html</loc>

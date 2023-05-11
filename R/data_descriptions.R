@@ -68,7 +68,7 @@
 #' @source [https://geojson-maps.ash.ms/](https://geojson-maps.ash.ms/)
 #'
 #' @examples
-#' ggplot2::ggplot(africa) +
+#' ggplot2::ggplot(asia) +
 #'   ggplot2::geom_sf(fill = '#2e4473',
 #'                    color = 'white') +
 #'   ggplot2::theme_void()
@@ -173,6 +173,7 @@
 
 
 # AFGHANISTAN --------------------------------------------------------------------------------------
+
 #' Afghanistan
 #'
 #' Health district level sf data for Afghanistan.
@@ -200,6 +201,8 @@
 #'   ggplot2::theme_void()
 'afghanistan_zone'
 
+
+# DRC ----------------------------------------------------------------------------------------------
 
 #' Democratic Republic of the Congo
 #'
@@ -279,6 +282,8 @@
 'drc_zone'
 
 
+# LIBERIA ------------------------------------------------------------------------------------------
+
 #' Liberia
 #'
 #' National level sf data for Liberia.
@@ -297,7 +302,7 @@
 #' @source OCHA West and Central AFrica via [humdata](https://data.humdata.org/) (2022).
 #'
 #' @examples
-#' ggplot2::ggplot(liberia_zone) +
+#' ggplot2::ggplot(liberia_nat) +
 #'   ggplot2::geom_sf(fill = '#2e4473',
 #'                    color = 'white') +
 #'   ggplot2::theme_void()
@@ -322,7 +327,7 @@
 #' @source OCHA West and Central AFrica via [humdata](https://data.humdata.org/) (2022).
 #'
 #' @examples
-#' ggplot2::ggplot(liberia_zone) +
+#' ggplot2::ggplot(liberia_reg) +
 #'   ggplot2::geom_sf(fill = '#2e4473',
 #'                    color = 'white') +
 #'   ggplot2::theme_void()

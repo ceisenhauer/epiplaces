@@ -12,12 +12,15 @@ This package doesn't really fix all those issues, but it *is* a data repository 
 ## example.
 
 ```{r}
-drc <- epiplaces::load_map(country = 'drc',
-                           level = 'region')
+epiplaces::load_map(country = 'drc',
+                    level = 'region')
 ```
 
 ## countries available.
 <!-- epimaps:availability -->
+
+In addition, a country level map are available for the world and each continent (excluding
+Antarctica).
 
 ## adding countries.
 Open an [issue](https://github.com/ceisenhauer/epimaps/issues).

@@ -1,7 +1,9 @@
 #' Build pkgdown site
 #'
 #' @description This internal function builds the pkgdown site and then embedds the "available
-#' countries" map into the homepage. 
+#' countries" map into the homepage. Normally this function is not run by hand and will be called
+#' automatically by `update_countries_available()`. If you do need to run it by hand, note that
+#' **it must be run from the root of the package directory**.
 #'
 #' @importFrom pkgdown build_site()
 #' @importFrom xml2 read_html xml_find_first read_html xml_find_all xml_add_sibling xml_replace 

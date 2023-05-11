@@ -22,7 +22,7 @@ liberia_nat
 National level sf data for Liberia.
 }
 \examples{
-ggplot2::ggplot(liberia_zone) +
+ggplot2::ggplot(liberia_nat) +
   ggplot2::geom_sf(fill = '#2e4473',
                    color = 'white') +
   ggplot2::theme_void()

@@ -1,6 +1,7 @@
 #' Update 'countries available' image for the home page
 #'
 #' @description Internal function that udpates the 'available countries' image for the home page.
+#' **WARNING: this function must be run from the root of the package directory**.
 #'
 #' @importFrom dplyr %>% filter mutate
 #' @importFrom here here
@@ -10,7 +11,8 @@
 update_countries_available <- function(show = TRUE, update_site = TRUE) {
   currently_available <- c('Afghanistan', 
                            'Democratic Republic of the Congo',
-                           'Liberia')
+                           'Liberia',
+                           'Uganda')
 
   world <- rnaturalearth::ne_countries(returnclass = 'sf') %>%
              filter(admin != 'Antarctica') %>%

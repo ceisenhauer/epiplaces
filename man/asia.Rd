@@ -21,7 +21,7 @@ asia
 Countries of Asia
 }
 \examples{
-ggplot2::ggplot(africa) +
+ggplot2::ggplot(asia) +
   ggplot2::geom_sf(fill = '#2e4473',
                    color = 'white') +
   ggplot2::theme_void()

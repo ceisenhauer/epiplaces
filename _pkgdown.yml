@@ -13,18 +13,26 @@ reference:
   - 'load_map'
 
 - title: Maps
-- subtitle: Nation
+- subtitle: Macro-Maps
+- contents:
+  - 'world'
+  - 'africa'
+  - 'asia'
+  - 'europe'
+  - 'north_america'
+  - 'oceania'
+  - 'south_america'
+
+- subtitle: Africa
 - contents:
   - 'drc_nat'
-  - 'liberia_nat'
-
-- subtitle: Region
-- contents:
   - 'drc_reg'
+  - 'drc_zone'
+  - 'liberia_nat'
   - 'liberia_reg'
+  - 'liberia_zone'
+  - 'uganda_zone'
 
-- subtitle: Zone
+- subtitle: Asia
 - contents:
   - 'afghanistan_zone'
-  - 'drc_zone'
-  - 'liberia_zone'

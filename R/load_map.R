@@ -4,7 +4,8 @@
 #'
 #' @param country `str` Country to load.
 #' @param level `str` Level of geographic resolution to use, either : zone, reg (regional), nat 
-#'   (national). Default is `'zone'`.
+#'   (national). If a multicountry map is requested (such as 'world' or 'africa'), `level` is
+#'   ignored. Default is `'zone'`.
 #' @param as `str` Type of output desired, either : `'sf`', `sp', or `'tibble'`, Default is `'sf'`.
 #'
 #' @examples
@@ -22,12 +23,18 @@
 #' @export
 load_map <- function(country, level = c('zone', 'reg', 'nat'),
                      as = c('sf', 'sp', 'tibble', 'data.table')) {
-  level <- match.arg(level)
   as <- match.arg(as)
 
-  map_name <- paste0('epiplaces::', country, '_', level)
-  out <- eval(parse(text = map_name))
+  if (country %in% c('Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America')) {
+    map_name <- paste0('epiplaces::', country)
+  
+  } else {
+    level <- match.arg(level)
 
+    map_name <- paste0('epiplaces::', country, '_', level)
+  }
+
+  out <- eval(parse(text = map_name))
   out <- switch(as,
                 'sf' = sf::st_as_sf(out),
                 'sp' = sf::as_Spatial(out),

@@ -24,8 +24,9 @@ afghanistan_zone
 Health district level sf data for Afghanistan.
 }
 \examples{
-ggplot2::ggplot(sf::st_as_sf(afghanistan_zone)) +
-  ggplot2::geom_sf() +
+ggplot2::ggplot(afghanistan_zone) +
+  ggplot2::geom_sf(fill = '#2e4473',
+                   color = 'white') +
   ggplot2::theme_void()
 }
 \keyword{dataset}

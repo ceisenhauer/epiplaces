@@ -14,7 +14,8 @@ load_map(
 \item{country}{\code{str} Country to load.}
 
 \item{level}{\code{str} Level of geographic resolution to use, either : zone, reg (regional), nat
-(national). Default is \code{'zone'}.}
+(national). If a multicountry map is requested (such as 'world' or 'africa'), \code{level} is
+ignored. Default is \code{'zone'}.}
 
 \item{as}{\code{str} Type of output desired, either : \verb{'sf}', \verb{sp', or }'tibble'\verb{, Default is }'sf'`.}
 }

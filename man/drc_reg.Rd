@@ -23,8 +23,9 @@ drc_reg
 Health zone level sf data for the Democratic Republic of the Congo.
 }
 \examples{
-ggplot2::ggplot(sf::st_as_sf(drc_reg)) +
-  ggplot2::geom_sf() +
+ggplot2::ggplot(drc_reg) +
+  ggplot2::geom_sf(fill = '#2e4473',
+                   color = 'white') +
   ggplot2::theme_void()
 }
 \keyword{dataset}

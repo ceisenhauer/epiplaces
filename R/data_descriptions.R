@@ -363,6 +363,72 @@
 
 
 
+# NIGER --------------------------------------------------------------------------------------------
+
+#' Niger (Regions)
+#'
+#' Admin level 1 (region) level sf data for Niger. 
+#'
+#' @docType data
+#'
+#' @format A `Simple feature collection` with 8 features and 9 fields: 
+#' \describe{
+#'  \item{adm0_iso3}{ISO Country Code}
+#'  \item{adm0_sub}{Country Subset (All, North, South, etc.)}
+#'  \item{adm0_name}{Country Name}
+#'  \item{adm1_name}{Region Name}
+#'  \item{adm1_pop}{Region Population}
+#'  \item{pcode}{P Code}
+#'  \item{lon}{Centerpoint Longitude}
+#'  \item{lat}{Centerpoint Latitude}
+#'  \item{source}{Data Source}
+#' }
+#'
+#' @keywords dataset
+#'
+#' @source Epicentre DS.
+#'
+#' @examples
+#' ggplot2::ggplot(niger_reg) +
+#'   ggplot2::geom_sf(fill = '#2e4473',
+#'                    color = 'white') +
+#'   ggplot2::theme_void()
+'niger_reg'
+
+
+#' Niger (Districts)
+#'
+#' Admin level 2 (district) level sf data for Niger. 
+#'
+#' @docType data
+#'
+#' @format A `Simple feature collection` with 72 features and 10 fields: 
+#' \describe{
+#'  \item{adm0_iso3}{ISO Country Code}
+#'  \item{adm0_sub}{Country Subset (All, North, South, etc.)}
+#'  \item{adm0_name}{Country Name}
+#'  \item{adm1_name}{Region Name}
+#'  \item{adm2_name}{District Name}
+#'  \item{adm2_pop}{District Population}
+#'  \item{pcode}{P Code}
+#'  \item{lon}{Centerpoint Longitude}
+#'  \item{lat}{Centerpoint Latitude}
+#'  \item{source}{Data Source}
+#' }
+#'
+#' @keywords dataset
+#'
+#' @source Epicentre DS.
+#'
+#' @examples
+#' ggplot2::ggplot(niger_zone) +
+#'   ggplot2::geom_sf(fill = '#2e4473',
+#'                    color = 'white') +
+#'   ggplot2::theme_void()
+'niger_zone'
+
+
+
 # UGANDA -------------------------------------------------------------------------------------------
 
 #' Uganda

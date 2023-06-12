@@ -25,7 +25,7 @@ load_map <- function(country, level = c('zone', 'reg', 'nat'),
                      as = c('sf', 'sp', 'tibble', 'data.table')) {
   as <- match.arg(as)
 
-  if (country %in% c('Africa', 'Asia', 'Europe', 'North America', 'Oceania', 'South America')) {
+  if (country %in% c('africa', 'asia', 'europe', 'north_america', 'oceania', 'south_america')) {
     map_name <- paste0('epiplaces::', country)
   
   } else {

@@ -12,6 +12,7 @@ update_countries_available <- function(show = TRUE, update_site = TRUE) {
   currently_available <- c('Afghanistan', 
                            'Democratic Republic of the Congo',
                            'Liberia',
+                           'Niger',
                            'Uganda')
 
   world <- rnaturalearth::ne_countries(returnclass = 'sf') %>%

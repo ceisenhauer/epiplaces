@@ -13,13 +13,13 @@ This package doesn't really fix all those issues, but it *is* a data repository 
 
 ```{r}
 epiplaces::load_map(country = 'drc',
-                    level = 'region')
+                    level = 'reg')
 ```
 
 ## countries available.
 <!-- epimaps:availability -->
 
-In addition, a country level map are available for the world and each continent (excluding
+In addition, a country level maps are available for the world and each continent (excluding
 Antarctica).
 
 ## adding countries.

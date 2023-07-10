@@ -33,6 +33,7 @@ reference:
   - 'liberia_zone'
   - 'niger_reg'
   - 'niger_zone'
+  - 'niger_old_zone'
   - 'uganda_zone'
 
 - subtitle: Asia

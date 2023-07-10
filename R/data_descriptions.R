@@ -429,6 +429,32 @@
 
 
 
+#' Niger (Pre-2017 Districts)
+#'
+#' Old (pre-2017) admin level 2 (district) level sf data for Niger. 
+#'
+#' @docType data
+#'
+#' @format A `Simple feature collection` with 36 features and 3 fields: 
+#' \describe{
+#'  \item{region}{Region Name}
+#'  \item{district}{District Name}
+#'  \item{pcode}{P Code}
+#' }
+#'
+#' @keywords dataset
+#'
+#' @source https://geodata.lib.utexas.edu/catalog/stanford-bd373dw4168 (thanks Sophie!).
+#'
+#' @examples
+#' ggplot2::ggplot(niger_old_zone) +
+#'   ggplot2::geom_sf(fill = '#2e4473',
+#'                    color = 'white') +
+#'   ggplot2::theme_void()
+'niger_old_zone'
+
+
+
 # UGANDA -------------------------------------------------------------------------------------------
 
 #' Uganda
